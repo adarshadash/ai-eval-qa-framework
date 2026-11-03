@@ -251,6 +251,21 @@ ai-eval-qa-framework/
 └── requirements.txt
 ```
 
+Every folder has its own README:
+
+| Folder | README |
+|---|---|
+| `app/` | [System under test](app/README.md) |
+| `evals/` | [Framework internals](evals/README.md) |
+| `evals/metrics/` | [Metric library](evals/metrics/README.md) |
+| `datasets/` | [Dataset formats and good practice](datasets/README.md) |
+| `configs/` | [Configuration reference](configs/README.md) |
+| `tests/` | [Running the pytest suites](tests/README.md) |
+| `baselines/` | [Regression baselines](baselines/README.md) |
+| `logs/` | [Production traces](logs/README.md) |
+| `reports/` | [Generated reports](reports/README.md) |
+| `.github/workflows/` | [CI/CD](.github/workflows/README.md) |
+
 ---
 
 ## How it works

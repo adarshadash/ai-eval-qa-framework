@@ -6,6 +6,7 @@ venv/
 .env
 reports/*
 !reports/.gitkeep
+!reports/README.md
 .DS_Store
 .idea/
 .vscode/
