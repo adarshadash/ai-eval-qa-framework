@@ -1,0 +1,9 @@
+// RAG cases: expected_doc_ids is the ground truth for retrieval; reference for generation.
+{"id": "rag-refund-window", "question": "How many days do I have to return an item for a refund?", "expected_doc_ids": ["refund-policy"], "reference": "Items can be returned for a refund within 30 days of delivery."}
+{"id": "rag-return-fee", "question": "Is there a fee for change-of-mind returns?", "expected_doc_ids": ["return-shipping"], "reference": "For change-of-mind returns, a $5 fee is deducted from the refund."}
+{"id": "rag-standard-shipping", "question": "How long does standard shipping take?", "expected_doc_ids": ["shipping-times"], "reference": "Standard shipping takes 3-5 business days."}
+{"id": "rag-points-redeem", "question": "How many points can be redeemed for a discount?", "expected_doc_ids": ["loyalty-program"], "reference": "100 points can be redeemed for a $5 discount."}
+{"id": "rag-warranty-length", "question": "How long is the warranty on electronics?", "expected_doc_ids": ["warranty"], "reference": "Electronics carry a 1-year limited warranty covering manufacturing defects."}
+{"id": "rag-payment-upi", "question": "Do you accept UPI payments?", "expected_doc_ids": ["payment-methods"], "reference": "We accept Visa, Mastercard, UPI and PayPal."}
+{"id": "rag-cancel-shipped", "question": "Can I cancel an order after it has shipped?", "expected_doc_ids": ["order-cancellation"], "reference": "After an order has shipped it cannot be cancelled and must be returned instead."}
+{"id": "rag-intl-time", "question": "How long do international orders take to arrive?", "expected_doc_ids": ["international-shipping"], "reference": "International orders take 7-14 business days."}

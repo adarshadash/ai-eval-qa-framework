@@ -1,0 +1,60 @@
+name: AI Evals
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "30 1 * * *"   # nightly live evals (01:30 UTC)
+  workflow_dispatch:
+
+jobs:
+  # Every PR: offline, free, deterministic. Blocks the merge on failure.
+  mock-evals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Unit tests (metrics + datasets)
+        run: pytest -m unit
+      - name: Eval gates (per case)
+        run: pytest -m "not unit"
+      - name: Eval runner (scores + baseline regression)
+        run: python -m evals.runner
+      - name: Publish report to job summary
+        if: always()
+        run: cat reports/report.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-report-mock
+          path: reports/
+
+  # Nightly / manual: real model calls. Catches model drift and prompt regressions.
+  live-evals:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    env:
+      EVAL_MODE: live
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Live evals
+        run: python -m evals.runner
+      - name: Publish report to job summary
+        if: always()
+        run: cat reports/report.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-report-live
+          path: reports/

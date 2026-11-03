@@ -1,0 +1,7 @@
+// Labelled tickets for the JSON classifier. Labels come from human support agents.
+{"id": "so-damaged-refund", "ticket": "The speaker I received is broken and damaged. I want my money back now, this is unacceptable!", "expected": {"category": "refund", "priority": "high", "sentiment": "negative"}}
+{"id": "so-where-package", "ticket": "Hi, my package hasn't arrived yet and the tracking hasn't updated in 3 days.", "expected": {"category": "shipping", "priority": "medium", "sentiment": "neutral"}}
+{"id": "so-login", "ticket": "I can't log in to my account, the password reset email never comes.", "expected": {"category": "account", "priority": "medium", "sentiment": "neutral"}}
+{"id": "so-app-crash", "ticket": "Your app crashes every time I open my cart. Error code 500.", "expected": {"category": "technical", "priority": "medium", "sentiment": "neutral"}}
+{"id": "so-compliment", "ticket": "Just wanted to say thanks, I love the headphones and delivery was great!", "expected": {"category": "other", "priority": "low", "sentiment": "positive"}}
+{"id": "so-fraud", "ticket": "There is an unauthorized charge on my card from your store. Please investigate urgently.", "expected": {"category": "other", "priority": "high", "sentiment": "negative"}}

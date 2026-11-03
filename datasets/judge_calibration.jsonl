@@ -1,0 +1,11 @@
+// Human-labelled answers used to calibrate the LLM judge. human_label = ground truth from a QA reviewer.
+{"id": "jc-01", "question": "How many days do I have to return an item?", "reference": "Items can be returned for a refund within 30 days of delivery.", "answer": "You can return items for a refund within 30 days of delivery.", "human_label": "PASS"}
+{"id": "jc-02", "question": "How many days do I have to return an item?", "reference": "Items can be returned for a refund within 30 days of delivery.", "answer": "You can return items within 60 days of purchase.", "human_label": "FAIL"}
+{"id": "jc-03", "question": "Does the warranty cover accidental damage?", "reference": "Accidental damage is not covered by the warranty.", "answer": "Yes, accidental damage is covered by the warranty.", "human_label": "FAIL"}
+{"id": "jc-04", "question": "Does the warranty cover accidental damage?", "reference": "Accidental damage is not covered by the warranty.", "answer": "No - the warranty does not cover accidental damage.", "human_label": "PASS"}
+{"id": "jc-05", "question": "How long does express shipping take?", "reference": "Express shipping takes 1-2 business days and costs $15.", "answer": "Express shipping takes 1-2 business days.", "human_label": "PASS"}
+{"id": "jc-06", "question": "How long does express shipping take?", "reference": "Express shipping takes 1-2 business days and costs $15.", "answer": "Express shipping takes 1-2 business days and is free.", "human_label": "FAIL"}
+{"id": "jc-07", "question": "Can I pay cash on delivery?", "reference": "Cash on delivery is not available.", "answer": "Sorry, cash on delivery isn't available.", "human_label": "PASS"}
+{"id": "jc-08", "question": "When do loyalty points expire?", "reference": "Loyalty points expire after 12 months.", "answer": "Points never expire.", "human_label": "FAIL"}
+{"id": "jc-09", "question": "Do you ship internationally?", "reference": "We ship internationally to 40 countries.", "answer": "Yes, we ship to 40 countries worldwide.", "human_label": "PASS"}
+{"id": "jc-10", "question": "Do you sell gift cards?", "reference": "I don't have information about that.", "answer": "Yes! Gift cards are available from $10 to $500.", "human_label": "FAIL"}

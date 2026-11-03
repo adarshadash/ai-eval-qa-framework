@@ -1,0 +1,4 @@
+// Cases repeated N times to measure stability under non-determinism.
+{"id": "cs-refund-window", "question": "How many days do I have to return an item for a refund?", "must_include": ["30 days"], "reference": "Items can be returned for a refund within 30 days of delivery."}
+{"id": "cs-express", "question": "How long does express shipping take?", "must_include": ["1-2 business days"], "reference": "Express shipping takes 1-2 business days and costs $15."}
+{"id": "cs-abstain", "question": "Do you sell gift cards?", "must_include": ["don't have information"], "reference": "I don't have information about that."}

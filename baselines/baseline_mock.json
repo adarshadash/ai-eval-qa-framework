@@ -1,0 +1,16 @@
+{
+  "created": "2026-11-03T05:13:41+00:00",
+  "mode": "mock",
+  "suites": {
+    "golden": 1.0,
+    "rag": 1.0,
+    "agent": 1.0,
+    "multi_turn": 1.0,
+    "safety": 1.0,
+    "structured_output": 1.0,
+    "consistency": 1.0,
+    "judge_calibration": 0.9,
+    "performance": 1.0,
+    "monitoring": 0.4
+  }
+}

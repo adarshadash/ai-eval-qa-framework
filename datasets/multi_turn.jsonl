@@ -1,0 +1,3 @@
+// Multi-turn conversations: later turns depend on earlier context ("it", "that order").
+{"id": "mt-refund-followup", "turns": [{"user": "Has ORD-1001 been delivered?", "must_include": ["delivered"], "forbidden_tools": ["issue_refund"]}, {"user": "The headphones stopped working, I want a refund for it.", "must_include": ["RF-1001"], "expected_tools": ["issue_refund"]}]}
+{"id": "mt-status-then-refund-blocked", "turns": [{"user": "Where is ORD-1003?", "must_include": ["processed"]}, {"user": "Just refund it then.", "must_include": ["isn't eligible"], "forbidden_tools": ["issue_refund"]}]}
